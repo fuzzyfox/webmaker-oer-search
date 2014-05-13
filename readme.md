@@ -1,2 +1,2 @@
 # webmaker-activity-search
-A little widget/plugin to search for activities on <https://webmaker.org>
+A little widget/plugin to search for OERs, specifically Teaching Kits and Activities, on <https://webmaker.org>
