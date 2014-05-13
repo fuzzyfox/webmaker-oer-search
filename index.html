@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>webmaker-activity-search</title>
+	<link rel="stylesheet" href="//stuff.webmaker.org/makerstrap/v0.1.7/makerstrap.complete.min.css">
+	<link rel="stylesheet" href="activity-search.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="./" class="navbar-brand">webmaker-activity-search</a>
+			</div>
+			<div style="height: 0px;padding: 0 15px 0 15px">
+				<ul class="nav navbar-nav navbar-right">
+					<li style="margin:0;"><a href="https://github.com/fuzzyfox/webmaker-activity-search"><span class="fa fa-github"></span> fuzzyfox/webmaker-activity-search</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h1>webmaker-activity-search</h1>
+				<form action="#">
+					<div class="input-group" id="activitySearch">
+						<input type="text" class="form-control">
+						<span class="input-group-btn">
+							<button class="btn btn-default">
+								<i class="fa fa-search"></i> search
+							</button>
+						</span>
+					</div>
+					<div class="well">
+						<h4>Search Results:</h4>
+						<ul class="media-list" id="results">
+							<!-- <li class="media" data-make-id="activity-1">
+								<a href="#result-1" class="pull-left thumbnail"><img src="//placebox.es/64/64/?t=1" alt="#"></a>
+								<div class="media-body">
+									<h4 class="media-heading">Search Result 1</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, voluptatibus?</p>
+								</div>
+							</li>
+							<li class="media" data-make-id="activity-2">
+								<a href="#result-2" class="pull-left thumbnail"><img src="//placebox.es/64/64/?t=2" alt="#"></a>
+								<div class="media-body">
+									<h4 class="media-heading">Search Result 2</h4>
+									<p>Vel vero iste reiciendis esse quam. Nobis sapiente velit maiores?</p>
+								</div>
+							</li>
+							<li class="media" data-make-id="activity-3">
+								<a href="#result-3" class="pull-left thumbnail"><img src="//placebox.es/64/64/?t=3" alt="#"></a>
+								<div class="media-body">
+									<h4 class="media-heading">Search Result 3</h4>
+									<p>Recusandae, molestiae, necessitatibus expedita nam eveniet suscipit distinctio error nesciunt.</p>
+								</div>
+							</li>
+							<li class="media" data-make-id="activity-4">
+								<a href="#result-4" class="pull-left thumbnail"><img src="//placebox.es/64/64/?t=4" alt="#"></a>
+								<div class="media-body">
+									<h4 class="media-heading">Search Result 4</h4>
+									<p>Ullam quaerat quos quas minus quibusdam ea porro voluptatem deleniti.</p>
+								</div>
+							</li> -->
+						</ul>
+					</div>
+					<div class="well">
+						<h4>Selected Activities:</h4>
+						<ul id="selected" class="media-list"></ul>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script src="makeapi-client/src/make-api.js"></script>
+	<script src="activity-search.js"></script>
+</body>
+</html>
