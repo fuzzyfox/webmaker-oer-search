@@ -6,7 +6,7 @@
     apiURL: 'https://makeapi.webmaker.org'
   });
 
-  function search( term, OERTags, error, success ) {
+  function search( term, oerTags, error, success ) {
     var results = [];
 
     function uniqueResults( err, makes ) {
@@ -39,7 +39,7 @@
     var initiatedSearches = 0;
     var completedSearches = 0;
 
-    OERTags.forEach( function( requiredTag ) {
+    oerTags.forEach( function( requiredTag ) {
       initiatedSearches += 2;
       makeapi.description( term ).tags( [ requiredTag ] ).limit( 10 ).then( uniqueResults );
       makeapi.title( term ).tags( [ requiredTag ] ).limit( 10 ).then( uniqueResults );
@@ -60,29 +60,29 @@
     // END HACK HACK HACK
   }
 
-  function WMOERSearch( term, options ) {
+  function wmOERSearch( term, options ) {
     options = {
-      OERType: options.OERType || 'all', // (kit|activity|all)
+      oerType: options.oerType || 'all', // (kit|activity|all)
       success: options.success || function( makes ) { return makes; },
       error: options.error || function( err ) { return console.error( err); }
     };
 
-    var OERTags = [];
+    var oerTags = [];
 
-    switch( options.OERType ) {
+    switch( options.oerType ) {
       case 'kit':
       case 'activity':
-        OERTags.push( options.OERType, 'teach-' + options.OERType );
+        oerTags.push( options.oerType, 'teach-' + options.oerType );
       break;
       case 'all':
-        OERTags.push( 'teach' );
+        oerTags.push( 'teach' );
       break;
       default:
-        return console.error( 'Unknown OERType. Received ' + options.OERType + ' expected one of the following: "kit", "activity", "all"' );
+        return console.error( 'Unknown oerType. Received ' + options.oerType + ', expected one of the following: "kit", "activity", "all"' );
     }
 
-    search( term, OERTags, options.error, options.success );
+    search( term, oerTags, options.error, options.success );
   }
 
-  window.WMOERSearch = WMOERSearch;
+  window.wmOERSearch = wmOERSearch;
 })( this, document );

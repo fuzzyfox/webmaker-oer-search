@@ -1,4 +1,4 @@
-/* global $, jQuery, WMOERSearch */
+/* global $, jQuery, wmOERSearch */
 /* jshint strict: false */
 
 /*
@@ -88,8 +88,8 @@ var $input = $('#activitySearch input');
 $('#activitySearch button#search').on('click', function( event ) {
   $('#results').empty();
   if( $input.val() !== '' ) {
-    WMOERSearch( $input.val(), {
-      OERType: $('oer-type').val(),
+    wmOERSearch( $input.val(), {
+      OERType: $('#oer-type').val(),
       success: handleActivitySearch,
       error: function( err ) { return console.error( err ); }
     });
